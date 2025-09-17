@@ -1,0 +1,42 @@
+/configs/
+├── pfsense/
+│   ├── firewall-rules.xml
+│   ├── vlan-config.xml
+│   └── backup-config.xml
+├── certificates/
+│   ├── ca-policy.txt
+│   └── cert-templates.txt
+├── siem/
+│   ├── wazuh-config.yml
+│   └── detection-rules.yml
+└── scripts/
+    ├── network-test.sh
+    └── cert-deploy.ps1
+
+/documentation/
+├── network-diagrams/
+│   ├── logical-topology.png
+│   └── physical-layout.png
+├── installation-guides/
+│   ├── pfsense-setup.md
+│   └── pki-deployment.md
+└── testing-results/
+    ├── penetration-test.md
+    └── compliance-check.md
+
+/monitoring/
+├── dashboards/
+│   ├── network-traffic.json
+│   └── security-events.json
+└── alerts/
+    ├── zero-trust-violations.yml
+    └── anomaly-detection.yml
+
+/demos/
+├── scenarios/
+│   ├── legitimate-access.md
+│   ├── blocked-device.md
+│   └── lateral-movement.md
+└── presentation/
+    ├── slides.pptx
+    └── demo-script.md
