@@ -16,11 +16,7 @@ Our Zero Trust implementation includes:
 - **Policy Enforcement**: Granular access controls based on identity and device trust
 
 ## Network Zones
-- **Management Zone (VLAN 10)**: Administrative systems and security tools
-- **Corporate Zone (VLAN 20)**: Standard employee workstations
-- **DMZ Zone (VLAN 30)**: Public-facing services and applications
-- **Guest Zone (VLAN 40)**: Untrusted devices and visitor access
-- **IoT Zone (VLAN 50)**: Internet of Things devices
+
 
 ## Technology Stack
 - **pfSense**: Firewall, routing, and VPN services
@@ -29,16 +25,5 @@ Our Zero Trust implementation includes:
 - **VMware/VirtualBox**: Virtualization platform
 - **Various Linux/Windows VMs**: Test systems and services
 
-## Project Status
-**Current Sprint**: Sprint 1 - Foundation & Network Segmentation  
-**Progress**: [Update weekly]
-**Next Deliverable**: [Date]
-
-## Quick Links
-- 📋 [Project Board](link-to-project-board)
-- 📖 [Project Wiki](link-to-wiki)
-- 🏗️ [Architecture Documentation](link-to-wiki-architecture)
-- 📊 [Sprint Progress](link-to-milestones)
-- 🔍 [Network Diagrams](link-to-diagrams)
 
 ## Repository Structure
