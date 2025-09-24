@@ -7,10 +7,6 @@ Zero Trust Network implementation demonstrating micro-segmentation, PKI authenti
 ## Project Overview
 This project demonstrates the implementation of Zero Trust Network Architecture principles through micro-segmentation, identity-based authentication, and continuous monitoring. Our goal is to create a secure network environment that embodies "never trust, always verify."
 
-## Team Members
-- **[Name]** - Project Manager & Documentation Lead
-- **[Name]** - Network Engineer & System Architect  
-- **[Name]** - Security Analyst & SIEM Specialist
 
 ## Architecture Overview
 Our Zero Trust implementation includes:
