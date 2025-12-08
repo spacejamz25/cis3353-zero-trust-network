@@ -1,29 +1,30 @@
-# cis3353-zero-trust-network
-Zero Trust Network implementation demonstrating micro-segmentation, PKI authentication, and continuous monitoring.
+# 🔐 CIS 3353 Zero Trust Network Architecture Project  
+### **A Complete Zero Trust Lab Implementation with PKI, SIEM, Threat Detection, & Automated Response**
 
-# Zero Trust Network Architecture Implementation
-**CIS 3353: Computer Systems Security - Group Project**
+![Status](https://img.shields.io/badge/status-in%20development-blue)
+![Framework](https://img.shields.io/badge/framework-Zero%20Trust-orange)
+![Security](https://img.shields.io/badge/security-level%20high-red)
+![Course](https://img.shields.io/badge/course-CIS3353-lightgrey)
 
-## Project Overview
-This project demonstrates the implementation of Zero Trust Network Architecture principles through micro-segmentation, identity-based authentication, and continuous monitoring. Our goal is to create a secure network environment that embodies "never trust, always verify."
+---
 
+## 📌 **Project Overview**
 
-## Architecture Overview
-Our Zero Trust implementation includes:
-- **Network Micro-segmentation**: 5 distinct VLANs with strict access controls
-- **PKI Authentication**: Certificate-based device and user authentication
-- **Continuous Monitoring**: SIEM with real-time threat detection
-- **Policy Enforcement**: Granular access controls based on identity and device trust
+This project implements a fully functional **Zero Trust Network Architecture (ZTNA)** as part of the **CIS 3353** curriculum.  
+The environment integrates:
 
-## Network Zones
+- **Network segmentation** using pfSense  
+- **Certificate-based identity & authentication** via PKI  
+- **Device trust evaluation** using compliance scoring  
+- **Advanced access controls** (time-based, role-based, trust-based)  
+- **SIEM monitoring** using Wazuh + Sysmon  
+- **Threat intelligence & anomaly detection**  
+- **Automated response** including quarantine  
+- **Penetration testing and end-to-end validation**
 
+This repository contains all scripts, documentation, diagrams, test results, and automation required to demonstrate a complete Zero Trust implementation.
 
-## Technology Stack
-- **pfSense**: Firewall, routing, and VPN services
-- **Windows Server 2019**: Certificate Authority and RADIUS
-- **Wazuh/ELK Stack**: SIEM and log analysis
-- **VMware/VirtualBox**: Virtualization platform
-- **Various Linux/Windows VMs**: Test systems and services
+---
 
+## 🧩 **Architecture Summary**
 
-## Repository Structure
