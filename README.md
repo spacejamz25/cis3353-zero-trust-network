@@ -3,6 +3,7 @@
 ## Collaborators
 - (Kien Nguyen)
 - (Jamal Turner)
+- (Chris F)
 
 ---
 
