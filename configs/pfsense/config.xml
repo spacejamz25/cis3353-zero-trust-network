@@ -1,0 +1,45 @@
+<pfSense>
+  <system>
+    <hostname>ztna-fw</hostname>
+    <domain>zerotrust.local</domain>
+  </system>
+  <interfaces>
+    <wan>
+      <if>em0</if>
+      <ipaddr>dhcp</ipaddr>
+    </wan>
+    <lan>
+      <if>em1</if>
+      <ipaddr>10.10.10.1</ipaddr>
+      <subnet>24</subnet>
+    </lan>
+  </interfaces>
+  <vlans>
+    <vlan>
+      <vlanif>em1</vlanif>
+      <tag>10</tag>
+      <descr>MGMT</descr>
+    </vlan>
+    <vlan>
+      <vlanif>em1</vlanif>
+      <tag>20</tag>
+      <descr>CORP</descr>
+    </vlan>
+    <vlan>
+      <vlanif>em1</vlanif>
+      <tag>30</tag>
+      <descr>DMZ</descr>
+    </vlan>
+    <vlan>
+      <vlanif>em1</vlanif>
+      <tag>40</tag>
+      <descr>GUEST</descr>
+    </vlan>
+    <vlan>
+      <vlanif>em1</vlanif>
+      <tag>99</tag>
+      <descr>QUARANTINE</descr>
+    </vlan>
+  </vlans>
+</pfSense>
+

@@ -1,0 +1,40 @@
+<FIREWALL>
+  <rule id="100">
+    <src>VLAN20_CORP</src>
+    <dst>VLAN30_DMZ</dst>
+    <proto>tcp</proto>
+    <dstport>443</dstport>
+    <action>pass</action>
+    <descr>Allow CORP to DMZ HTTPS</descr>
+  </rule>
+  <rule id="110">
+    <src>VLAN10_MGMT</src>
+    <dst>any</dst>
+    <proto>any</proto>
+    <action>pass</action>
+    <descr>Allow MGMT to manage all</descr>
+  </rule>
+  <rule id="120">
+    <src>VLAN40_GUEST</src>
+    <dst>any</dst>
+    <proto>tcp</proto>
+    <dstport>80,443</dstport>
+    <action>pass</action>
+    <descr>Allow GUEST web to Internet only (via NAT)</descr>
+  </rule>
+  <rule id="130">
+    <src>VLAN40_GUEST</src>
+    <dst>RFC1918</dst>
+    <proto>any</proto>
+    <action>block</action>
+    <descr>Block GUEST to internal networks</descr>
+  </rule>
+  <rule id="140">
+    <src>VLAN99_QUAR</src>
+    <dst>RFC1918</dst>
+    <proto>any</proto>
+    <action>block</action>
+    <descr>Block QUARANTINE from internal networks</descr>
+  </rule>
+</FIREWALL>
+

@@ -1,0 +1,7 @@
+# Simulated nmap scan from CORP to DMZ web server (10.30.10.10)
+
+PORT    STATE  SERVICE
+443/tcp open   https
+
+Explanation: Only HTTPS is allowed from Corporate to DMZ.
+

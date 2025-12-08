@@ -1,0 +1,14 @@
+Physical / virtual layout (conceptual):
+
+- Hypervisor host running:
+  - pfSense firewall VM (ztna-fw)
+  - Windows Server (AD + CA)
+  - One or more Windows 10/11 clients
+  - Optional Linux server in DMZ for web/demo
+
+- Virtual switches / port groups:
+  - Mapped to VLAN 10/20/30/40/99
+  - pfSense has one interface per VLAN
+
+This text describes the lab layout we would build if we had full resources.
+

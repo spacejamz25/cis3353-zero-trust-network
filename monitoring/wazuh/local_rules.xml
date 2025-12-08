@@ -1,0 +1,13 @@
+<group name="zerotrust,">
+  <rule id="900100" level="10">
+    <if_group>firewall,</if_group>
+    <match>guest_to_corp_rdp</match>
+    <description>Zero Trust policy violation: Guest VLAN attempted RDP to Corporate server</description>
+  </rule>
+  <rule id="900110" level="8">
+    <if_group>proxy,</if_group>
+    <match>malicious_domain_block</match>
+    <description>Zero Trust: Access to known malicious domain blocked by proxy</description>
+  </rule>
+</group>
+

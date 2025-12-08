@@ -1,0 +1,7 @@
+# Simulated pf rules output for Zero Trust lab
+
+@0 block drop in log all label "Default deny all"
+@1 pass in quick on vlan20 from 10.20.10.0/24 to 10.30.10.10 port = 443 keep state label "CORP to DMZ HTTPS"
+@2 pass in quick on vlan10 from 10.10.10.0/24 to any keep state label "MGMT to any"
+@3 block in quick on vlan40 from 10.40.10.0/24 to 10.0.0.0/8 keep state label "GUEST blocked from internal"
+

@@ -1,0 +1,11 @@
+[
+  {
+    "rule": { "id": "900100", "level": 10, "description": "Zero Trust policy violation: Guest VLAN attempted RDP to Corporate server" },
+    "agent": { "id": "000", "name": "wazuh-manager" },
+    "srcip": "10.40.10.25",
+    "dstip": "10.20.10.10",
+    "location": "pf: /var/log/pfsense-firewall.log",
+    "timestamp": "2025-11-30T21:14:56Z"
+  }
+]
+

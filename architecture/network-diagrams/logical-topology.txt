@@ -1,0 +1,19 @@
+Logical network topology for the Zero Trust lab (simulated).
+
+VLANs and subnets:
+- VLAN 10 – MGMT        – 10.10.10.0/24
+- VLAN 20 – CORPORATE   – 10.20.10.0/24
+- VLAN 30 – DMZ         – 10.30.10.0/24
+- VLAN 40 – GUEST/BYOD  – 10.40.10.0/24
+- VLAN 99 – QUARANTINE  – 10.99.10.0/24
+
+pfSense acts as the policy enforcement point (PEP) between all VLANs.  
+Default stance: **deny everything**, then allow only:
+
+- CORP → DMZ (TCP 443)
+- MGMT → any (administration)
+- GUEST → Internet-only (TCP 80/443, no internal RFC1918)
+- QUARANTINE → no access to internal RFC1918
+
+Diagrams based on this description can be created in draw.io or PowerPoint.
+
