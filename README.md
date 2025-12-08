@@ -2,7 +2,7 @@
 
 ## Collaborators
 - (Kien Nguyen)
-- (Jamal Turners)
+- (Jamal Turner)
 
 ---
 
