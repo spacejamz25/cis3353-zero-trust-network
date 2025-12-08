@@ -86,19 +86,6 @@ This Zero Trust model uses:
 
 Even though this is a simulated/classroom environment, the structure mirrors how a real organization would approach a Zero Trust initiative.
 
----
-
-## 📂 Repository Structure
-
-```text
-configs/               → pfSense configs + PKI templates  
-monitoring/            → SIEM rules, sample logs, alert examples  
-scripts/               → Compliance checks, test utilities  
-automation/            → Threat-response / quarantine logic  
-documentation/         → Sprint notes, test plans, write-ups  
-lab-evidence/          → Scans, logs, screenshots, sample outputs  
-architecture/          → Topology descriptions and design summaries  
-
 ## 📘 Documentation
 
 Additional detail, including:
@@ -124,3 +111,17 @@ While it is not a production deployment, it:
 - 🌐 Emphasizes identity, segmentation, and monitoring  
 - 📄 Uses realistic configuration formats, logs, and workflows  
 - 🚀 Provides a strong foundation for further lab expansion or future courses  
+
+---
+
+## 📂 Repository Structure
+
+```text
+configs/               → pfSense configs + PKI templates  
+monitoring/            → SIEM rules, sample logs, alert examples  
+scripts/               → Compliance checks, test utilities  
+automation/            → Threat-response / quarantine logic  
+documentation/         → Sprint notes, test plans, write-ups  
+lab-evidence/          → Scans, logs, screenshots, sample outputs  
+architecture/          → Topology descriptions and design summaries  
+
