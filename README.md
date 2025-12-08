@@ -28,7 +28,7 @@ The project focuses on:
 4. Enroll certificates for devices/users  
 5. Install Wazuh SIEM  
 6. Forward pfSense + Sysmon logs to Wazuh  
-7. Run basic test scripts and capture results into the `tests/` folder  
+7. Run basic test scripts and capture results  
 
 ---
 
@@ -39,18 +39,3 @@ This Zero Trust model uses:
 - **Proxy filtering** to restrict web access  
 - **Log collection** via Wazuh and pfSense  
 - **Simple detection rules** and manual analysis  
-
-Supporting documents and screenshots are stored in the `Ref/` and `tests/` folders.
-
----
-
-## File Structure
-```text
-Ref/       → Reference PDFs, assignment guide, diagrams
-configs/   → pfSense, Wazuh, PKI config backups or exports
-scripts/   → Small helper scripts (optional, for tests)
-tests/     → Screenshots and test/validation results
-
-## 📄 **License**
-This project is for academic use only.
-
