@@ -1,144 +1,126 @@
-🔐 CIS 3353 – Zero Trust Network Architecture Project
+# 🔐 CIS 3353 – Zero Trust Network Architecture Project
 
-A structured, educational implementation of a Zero Trust Network Architecture (ZTNA) designed for CIS 3353 – Computer Systems Security.
-This project demonstrates modern Zero Trust concepts using pfSense, Windows Server PKI, proxy filtering, and SIEM-based monitoring.
+A structured, educational implementation of a **Zero Trust Network Architecture (ZTNA)** designed for **CIS 3353 – Computer Systems Security**.  
+This project demonstrates modern Zero Trust concepts using **pfSense**, **Windows Server PKI**, **proxy filtering**, and **SIEM-based monitoring**.
 
-👥 Collaborators
+---
 
-Kien Nguyen
+## 👥 Collaborators
+- **Kien Nguyen**  
+- **Jamal Turner**  
+- **Chris F**  
 
-Jamal Turner
+---
 
-Chris F
+## 🎯 Objective
 
-🎯 Project Overview
+This project implements a simplified Zero Trust Network Architecture to demonstrate:
 
-This project implements a simplified Zero Trust model focusing on:
+- 🌐 Network segmentation using pfSense  
+- 🔐 PKI certificate creation and authentication  
+- 🛡️ Basic proxy filtering with Squid / SquidGuard  
+- 📊 Security monitoring and alerting with a Wazuh-style SIEM  
+- 🧪 Test scripts and evidence collection  
 
-🔐 Certificate-based authentication (PKI)
+The goal is to illustrate how Zero Trust principles can be applied in a practical, structured, and measurable way.
 
-🌐 Network segmentation using pfSense VLANs
+---
 
-🚧 Default-deny firewall enforcement
+## 🧩 Core Components
 
-🛡️ Proxy and URL filtering (Squid/SquidGuard)
+### 🌐 Network Segmentation
+- Multiple VLANs (Management, Corporate, DMZ, Guest/BYOD, Quarantine)  
+- Default-deny between internal zones  
+- Only specific, intentional flows allowed (e.g., Corporate → DMZ HTTPS)
 
-📊 Security monitoring via a Wazuh-style SIEM
+### 🔐 PKI Identity & Authentication
+- Windows Server AD CS (Certificate Authority)  
+- User and device certificate templates  
+- Certificate enrollment and authentication flows
 
-🧪 Test scenarios and helper scripts
+### 🚧 Firewall Enforcement
+- pfSense configured as the central Policy Enforcement Point  
+- Strict inter-VLAN rules based on Zero Trust principles  
+- Guest and Quarantine networks isolated from internal subnets
 
-The goal is to demonstrate how modern Zero Trust environments secure identity, network traffic, and device posture while continuously monitoring system behavior.
+### 🌐 Proxy & URL Filtering
+- Squid/SquidGuard used to filter outbound HTTP/HTTPS traffic  
+- Domain categories (allowed / restricted / blocked)  
+- Adds another control point for Zero Trust egress traffic
 
-🧩 Core Components
-🌐 1. Network Segmentation
+### 📊 Security Monitoring (SIEM)
+- Wazuh-style SIEM pipeline for:
+  - pfSense firewall logs  
+  - Endpoint/log simulation (e.g., Sysmon-style logs)  
+  - Custom detection rules for Zero Trust violations  
 
-Multiple VLANs isolate devices based on trust level to prevent lateral movement:
+### 🤖 Scripts & Testing
+- Device compliance and trust scoring (e.g., Managed vs Guest vs Untrusted)  
+- Simple automation to simulate quarantine actions  
+- Penetration testing and integration testing scenarios documented in the repo
 
-Management
+---
 
-Corporate
+## 🏗️ Setup Overview (High Level)
 
-DMZ
+1. Deploy **pfSense** firewall  
+2. Create **VLANs** and segmentation policies  
+3. Configure **Windows Server AD CS (PKI)**  
+4. Enroll **certificates** for devices and/or users  
+5. Install **Wazuh SIEM** (or simulated equivalent)  
+6. Forward **pfSense + Sysmon-style logs** to Wazuh  
+7. Run **test scripts** and capture results as evidence  
 
-Guest/BYOD
+---
 
-Quarantine
+## 🧠 Implementation Summary
 
-🔐 2. PKI Identity & Authentication
+This Zero Trust model uses:
 
-A Windows Server CA issues certificates to users/devices.
-Authentication relies on cryptographic identity, not trust-by-location.
+- 🔐 **Identity-based access control** via certificates  
+- 🌐 **Segmentation** to isolate different network zones  
+- 🛡️ **Proxy filtering** to limit outbound traffic and block risky domains  
+- 📊 **Log collection and monitoring** through a SIEM-style pipeline  
+- 🚨 **Basic detection rules** and manual analysis of alerts  
+- 🧪 **Testing outputs** (logs, scans, results) to validate expected behavior  
 
-🚧 3. Firewall Enforcement
+Even though this is a simulated/classroom environment, the structure mirrors how a real organization would approach a Zero Trust initiative.
 
-pfSense applies strict Zero Trust rules:
+---
 
-Default deny between VLANs
+## 📂 Repository Structure
 
-Limited allowed flows (e.g., Corporate → DMZ HTTPS)
+```text
+configs/               → pfSense configs + PKI templates  
+monitoring/            → SIEM rules, sample logs, alert examples  
+scripts/               → Compliance checks, test utilities  
+automation/            → Threat-response / quarantine logic  
+documentation/         → Sprint notes, test plans, write-ups  
+lab-evidence/          → Scans, logs, screenshots, sample outputs  
+architecture/          → Topology descriptions and design summaries  
 
-Guest/BYOD isolation
+## 📘 Documentation
 
-Full quarantine environment
+Additional detail, including:
 
-🌐 4. Proxy Filtering
+- 🏛️ **Architecture overview**  
+- 🌐 **Network segmentation design**  
+- 🔐 **PKI and identity flow**  
+- 🚧 **Firewall & proxy rules**  
+- 📊 **SIEM rule examples and alerts**  
+- 🧪 **Penetration & integration test descriptions**  
+- 📅 **Sprint-by-sprint progress**  
 
-Squid/SquidGuard enforce outbound browsing rules:
+is available in the **GitHub Wiki** for this repository.
 
-Allowed
+---
 
-Restricted
+## 🏁 Final Notes
 
-Blocked categories
+This project is a **simulated Zero Trust environment** built for learning and demonstration.  
+While it is not a production deployment, it:
 
-📊 5. Security Monitoring (SIEM)
-
-A Wazuh-style SIEM pipeline analyzes:
-
-pfSense logs
-
-Sysmon-style endpoint logs
-
-Custom Zero Trust alerts
-
-🤖 6. Scripts & Automation
-
-Device compliance scoring
-
-Automated quarantine workflow simulation
-
-Pen-testing and integration testing utilities
-
-🏗️ High-Level Architecture Workflow
-
-pfSense isolates network segments
-
-PKI certificates authenticate users & devices
-
-Firewall rules enforce Zero Trust access policies
-
-Proxy filtering controls outbound traffic
-
-SIEM monitors logs and detects violations
-
-Scripts automate device posture and threat response
-
-🛠️ Setup Summary
-
-Deploy pfSense
-
-Create VLANs & firewall rules
-
-Install Windows Server AD CS
-
-Configure certificate templates + auto-enrollment
-
-Install Squid/SquidGuard
-
-Deploy Wazuh SIEM stack
-
-Forward logs from pfSense & endpoints
-
-Execute tests + collect evidence
-
-🧠 Zero Trust Implementation Summary
-
-This project implements core Zero Trust principles:
-
-Never trust, always verify
-
-Identity before access
-
-Device health affects trust level
-
-Segmentation prevents lateral movement
-
-Explicit allow policies
-
-Continuous monitoring & logging
-
-Automated action on violations
-
-Together, these components form a complete educational Zero Trust environment.
-
-📂 Repository Structure
+- 🔐 Follows real Zero Trust principles (“never trust, always verify”)  
+- 🌐 Emphasizes identity, segmentation, and monitoring  
+- 📄 Uses realistic configuration formats, logs, and workflows  
+- 🚀 Provides a strong foundation for further lab expansion or future courses  
