@@ -114,6 +114,14 @@ While it is not a production deployment, it:
 
 ---
 
+## 👥 Contribution Summary
+
+| Student        | Contribution % | Summary of Contributions |
+|----------------|----------------|---------------------------|
+| **Kien Nguyen** | 20 | Created GitHub Wiki structure, wrote documentation pages (architecture, segmentation, PKI, SIEM), organized issues & milestones, prepared final presentation assets, and authored integration test documentation. |
+| **Jamal Turner** | 20 | Worked on network segmentation design, VLAN configuration, pfSense firewall policy development, PKI certificate template design, and assisted with Zero Trust access control logic. |
+| **Chris F** | 15 | Focused on SIEM log analysis, sample alert creation, penetration test writeups, and reviewed/edited documentation. Helped validate firewall and PKI workflows in the simulated environment. |
+
 ## 📂 Repository Structure
 
 ```text
@@ -124,4 +132,3 @@ automation/            → Threat-response / quarantine logic
 documentation/         → Sprint notes, test plans, write-ups  
 lab-evidence/          → Scans, logs, screenshots, sample outputs  
 architecture/          → Topology descriptions and design summaries  
-
